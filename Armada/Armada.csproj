@@ -62,11 +62,11 @@
     <Compile Include="Engine\Fleet\MoveShips.cs" />
     <Compile Include="Engine\Fleet\ValidateFleetOrders.cs" />
     <Compile Include="Engine\Ship\ShipLocation.cs" />
-    <Compile Include="UserInterface\Form1.cs">
+    <Compile Include="UserInterface\GameInterface.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UserInterface\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="UserInterface\GameInterface.Designer.cs">
+      <DependentUpon>GameInterface.cs</DependentUpon>
     </Compile>
     <Compile Include="Player\AdmiralInformation.cs" />
     <Compile Include="Player\Base.cs" />
@@ -83,7 +83,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserInterface\GameInterface.resx">
+      <DependentUpon>GameInterface.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Graphics\green_base.psd" />
     <None Include="Graphics\green_fighter.psd" />
     <None Include="Graphics\green_fighter_frame.psd" />
@@ -125,6 +129,8 @@
     <Content Include="Graphics\green_fighter_SE.png" />
     <Content Include="Graphics\green_fighter_SW.png" />
     <Content Include="Graphics\green_fighter_W.png" />
+    <None Include="Graphics\images\bg.jpg" />
+    <None Include="Graphics\images\bg.png" />
     <Content Include="Graphics\red_base.png" />
     <Content Include="Graphics\red_fighter_E.png" />
     <Content Include="Graphics\red_fighter_frame.png" />
