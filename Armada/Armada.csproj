@@ -62,6 +62,13 @@
     <Compile Include="Engine\Fleet\MoveShips.cs" />
     <Compile Include="Engine\Fleet\ValidateFleetOrders.cs" />
     <Compile Include="Engine\Ship\ShipLocation.cs" />
+    <Compile Include="GameGraphics\DrawGrid.cs" />
+    <Compile Include="GameGraphics\InitializeGFX.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="UserInterface\GameInterface.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,22 +85,16 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="UserInterface\GameInterface.resx">
       <DependentUpon>GameInterface.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Graphics\green_base.psd" />
-    <None Include="Graphics\green_fighter.psd" />
-    <None Include="Graphics\green_fighter_frame.psd" />
-    <None Include="Graphics\red_base.psd" />
-    <None Include="Graphics\red_fighter.psd" />
-    <None Include="Graphics\red_fighter_frame.psd" />
+    <None Include="ImageFiles\green_base.psd" />
+    <None Include="ImageFiles\green_fighter.psd" />
+    <None Include="ImageFiles\green_fighter_frame.psd" />
+    <None Include="ImageFiles\red_base.psd" />
+    <None Include="ImageFiles\red_fighter.psd" />
+    <None Include="ImageFiles\red_fighter_frame.psd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -106,41 +107,39 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Graphics\bg.jpg" />
-    <Content Include="Graphics\bg.png" />
-    <Content Include="Graphics\fighter_frame.bmp" />
-    <Content Include="Graphics\fighter_frame.png" />
-    <Content Include="Graphics\fighter_frame_45.png" />
-    <Content Include="Graphics\fighter_frame_E.png" />
-    <Content Include="Graphics\fighter_frame_N.png" />
-    <Content Include="Graphics\fighter_frame_NE.png" />
-    <Content Include="Graphics\fighter_frame_NW.png" />
-    <Content Include="Graphics\fighter_frame_S.png" />
-    <Content Include="Graphics\fighter_frame_SE.png" />
-    <Content Include="Graphics\fighter_frame_SW.png" />
-    <Content Include="Graphics\fighter_frame_W.png" />
-    <Content Include="Graphics\green_base.png" />
-    <Content Include="Graphics\green_fighter_E.png" />
-    <Content Include="Graphics\green_fighter_frame.png" />
-    <Content Include="Graphics\green_fighter_N.png" />
-    <Content Include="Graphics\green_fighter_NE.png" />
-    <Content Include="Graphics\green_fighter_NW.png" />
-    <Content Include="Graphics\green_fighter_S.png" />
-    <Content Include="Graphics\green_fighter_SE.png" />
-    <Content Include="Graphics\green_fighter_SW.png" />
-    <Content Include="Graphics\green_fighter_W.png" />
-    <None Include="Graphics\images\bg.jpg" />
-    <None Include="Graphics\images\bg.png" />
-    <Content Include="Graphics\red_base.png" />
-    <Content Include="Graphics\red_fighter_E.png" />
-    <Content Include="Graphics\red_fighter_frame.png" />
-    <Content Include="Graphics\red_fighter_N.png" />
-    <Content Include="Graphics\red_fighter_NE.png" />
-    <Content Include="Graphics\red_fighter_NW.png" />
-    <Content Include="Graphics\red_fighter_S.png" />
-    <Content Include="Graphics\red_fighter_SE.png" />
-    <Content Include="Graphics\red_fighter_SW.png" />
-    <Content Include="Graphics\red_fighter_W.png" />
+    <Content Include="ImageFiles\fighter_frame.bmp" />
+    <Content Include="ImageFiles\fighter_frame.png" />
+    <Content Include="ImageFiles\fighter_frame_45.png" />
+    <Content Include="ImageFiles\fighter_frame_E.png" />
+    <Content Include="ImageFiles\fighter_frame_N.png" />
+    <Content Include="ImageFiles\fighter_frame_NE.png" />
+    <Content Include="ImageFiles\fighter_frame_NW.png" />
+    <Content Include="ImageFiles\fighter_frame_S.png" />
+    <Content Include="ImageFiles\fighter_frame_SE.png" />
+    <Content Include="ImageFiles\fighter_frame_SW.png" />
+    <Content Include="ImageFiles\fighter_frame_W.png" />
+    <Content Include="ImageFiles\green_base.png" />
+    <Content Include="ImageFiles\green_fighter_E.png" />
+    <Content Include="ImageFiles\green_fighter_frame.png" />
+    <Content Include="ImageFiles\green_fighter_N.png" />
+    <Content Include="ImageFiles\green_fighter_NE.png" />
+    <Content Include="ImageFiles\green_fighter_NW.png" />
+    <Content Include="ImageFiles\green_fighter_S.png" />
+    <Content Include="ImageFiles\green_fighter_SE.png" />
+    <Content Include="ImageFiles\green_fighter_SW.png" />
+    <Content Include="ImageFiles\green_fighter_W.png" />
+    <None Include="ImageFiles\bg.jpg" />
+    <None Include="ImageFiles\bg.png" />
+    <Content Include="ImageFiles\red_base.png" />
+    <Content Include="ImageFiles\red_fighter_E.png" />
+    <Content Include="ImageFiles\red_fighter_frame.png" />
+    <Content Include="ImageFiles\red_fighter_N.png" />
+    <Content Include="ImageFiles\red_fighter_NE.png" />
+    <Content Include="ImageFiles\red_fighter_NW.png" />
+    <Content Include="ImageFiles\red_fighter_S.png" />
+    <Content Include="ImageFiles\red_fighter_SE.png" />
+    <Content Include="ImageFiles\red_fighter_SW.png" />
+    <Content Include="ImageFiles\red_fighter_W.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
