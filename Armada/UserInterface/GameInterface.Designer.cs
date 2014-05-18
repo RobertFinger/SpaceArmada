@@ -75,7 +75,7 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.PlayField = new System.Windows.Forms.Panel();
+            this.textBox10 = new System.Windows.Forms.TextBox();
             this.GameField.SuspendLayout();
             this.FleetControl.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -95,9 +95,9 @@
             this.GameField.BackColor = System.Drawing.SystemColors.ControlDark;
             this.GameField.BackgroundImage = global::Armada.Properties.Resources.bg1;
             this.GameField.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.GameField.Controls.Add(this.textBox10);
             this.GameField.Controls.Add(this.FleetControl);
             this.GameField.Controls.Add(this.ShipControl);
-            this.GameField.Controls.Add(this.PlayField);
             this.GameField.Dock = System.Windows.Forms.DockStyle.Fill;
             this.GameField.Location = new System.Drawing.Point(0, 0);
             this.GameField.Name = "GameField";
@@ -545,14 +545,13 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // PlayField
+            // textBox10
             // 
-            this.PlayField.BackgroundImage = global::Armada.Properties.Resources.bg;
-            this.PlayField.Location = new System.Drawing.Point(242, 33);
-            this.PlayField.Name = "PlayField";
-            this.PlayField.Size = new System.Drawing.Size(500, 501);
-            this.PlayField.TabIndex = 0;
-            this.PlayField.Paint += new System.Windows.Forms.PaintEventHandler(this.PlayField_Paint);
+            this.textBox10.Location = new System.Drawing.Point(403, 227);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.Size = new System.Drawing.Size(100, 20);
+            this.textBox10.TabIndex = 4;
+            this.textBox10.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             // 
             // GameInterface
             // 
@@ -564,6 +563,7 @@
             this.Text = "Space Armada. This time it\'s personal.";
             this.TopMost = true;
             this.GameField.ResumeLayout(false);
+            this.GameField.PerformLayout();
             this.FleetControl.ResumeLayout(false);
             this.FleetControl.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -589,7 +589,6 @@
         #endregion
 
         private System.Windows.Forms.Panel GameField;
-        private System.Windows.Forms.Panel PlayField;
         private System.Windows.Forms.Panel FleetControl;
         private System.Windows.Forms.Panel ShipControl;
         private System.Windows.Forms.Label label1;
@@ -636,6 +635,7 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox10;
     }
 }
 

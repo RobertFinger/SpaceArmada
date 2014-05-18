@@ -8,6 +8,8 @@ namespace Armada.UserInterface
         public GameInterface()
         {
             InitializeComponent();
+
+            
         }
 
         private void GameField_Paint(object sender, PaintEventArgs e)
@@ -38,6 +40,11 @@ namespace Armada.UserInterface
         private void PlayField_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void textBox10_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

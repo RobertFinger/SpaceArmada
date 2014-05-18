@@ -31,6 +31,14 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -44,8 +52,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Board\BoardData.cs" />
     <Compile Include="Board\BoardSetup.cs" />
-    <Compile Include="Board\BoardSize.cs" />
     <Compile Include="Board\FleetLocationsOnBoard.cs" />
     <Compile Include="Engine\DefaultStats\CalculateDamage.cs" />
     <Compile Include="Engine\Ship\CurrentShieldAndWeaponPower.cs" />
@@ -55,7 +63,7 @@
     <Compile Include="Engine\Fleet\TransmitFleetOrders.cs" />
     <Compile Include="Engine\Ship\AttackShip.cs" />
     <Compile Include="Engine\DefaultStats\BaseStats.cs" />
-    <Compile Include="Board\EndTurn.cs" />
+    <Compile Include="Board\Turns.cs" />
     <Compile Include="Engine\Fleet\ExecuteFleetOrders.cs" />
     <Compile Include="Engine\DefaultStats\FighterStats.cs" />
     <Compile Include="Engine\DefaultStats\HaulerStats.cs" />
